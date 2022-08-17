@@ -1,0 +1,20 @@
+body {
+    font-family: sans-serif;
+}
+.logo {
+    display: flex;
+}
+.logo img{
+    height: 100px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    height: 100px;
+    padding: 10px;
+}
+.encabezado{
+    color: white;
+    align-items: center;
+}
