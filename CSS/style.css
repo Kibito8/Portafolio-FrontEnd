@@ -3,6 +3,7 @@ body {
 }
 .logo {
     display: flex;
+    align-items: center;
 }
 .logo img{
     height: 100px;
@@ -12,9 +13,39 @@ header{
     justify-content: space-between;
     background-color: blue;
     height: 100px;
-    padding: 10px;
-}
-.encabezado{
-    color: white;
+    padding: 5px;
     align-items: center;
+}
+.Perfil{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    shape-outside: circle();
+    clip-path: circle();
+}
+.Perfil img {
+    width: 150px;
+    height: 150px;
+}
+.logobtn img{
+    width: 25px;
+    height: 25px;
+}
+.btn {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s ease-in-out;
+}
+.btn:hover {
+    background-color: white;
+    color: blue;
+}
+.banner{
+    position: relative;
+    widows: 100%;
+    height: calc(30vh - 50px);
+    width: calc(100%);
+    filter: blur(3px);
 }
