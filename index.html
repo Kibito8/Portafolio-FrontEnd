@@ -12,59 +12,60 @@
         <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <!--  CSS -->
         <link rel="stylesheet" href="CSS/style.css">
+        <!-- Bootstrap ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     </head>
 
     <body>
-        <header style="color: white;">
+
+        <header>
+            <!-- Header con Logo de Argentina Programa -->
             <div class="logo">
                 <img id="logo" src="img\APLogo-20-20.png" alt="Argentina Programa">
-                <h4>#YoProgramo</h4>
+                <h5>#YoProgramo</h5>
             </div>
-
             <div>
-                <a href="https://www.linkedin.com/in/lautaro-seoane/" class="btn logobtn"><img src="img/Linkedin.png" alt="linkedin"></a>
-                <a class="btn" href="#" ><strong>Iniciar session</strong></a>
+                <!-- Boton que redirige a linkedin-->
+                <button class="btn logobtn" href="https://www.linkedin.com/in/lautaro-seoane/"><img src="img/Linkedin.png" alt="linkedin"></button>
+                <!-- Boton para entrar en modo edición -->
+                <button class="btn" href="#"><strong>Iniciar sesión</strong></button>
             </div>
-
         </header>
 
-        <div style="position: relative;">
-            <div><img style="" src="img/codigos.jpg" alt="banner" class="banner"></div>
-            <div style="position: absolute; left: 30px; top: 50px; z-index: 3;" class="Perfil"><img src="img/FotoPerfil.jpg" alt="CSS"></div> 
+        <!-- Banner del Perfil -->
+        <div class="banner" >
+            <!-- Foto de Perfil -->
+            <div style="padding-left: 125px;">
+                <img class="Perfil" src="/img/FotoPerfil.jpg" alt="FotoDePerfil">
+            </div>
         </div>
 
-            <h3><strong> HOLA MUNDO! </strong></h3>
-            <p>Veamos cómo configurar las fuentes de un contenido, disponible en un elemento HTML. Puedes establecer las siguientes propiedades de fuente de un elemento:
-    
-                La propiedad font-family se utiliza para cambiar la cara de una fuente.
-                
-                La propiedad de font-style se usa para hacer una fuente en cursiva u oblicua.
-                
-                La propiedad font-variant se utiliza para crear un efecto de versalitas.
-                
-                La propiedad de font-weight se utiliza para aumentar o disminuir la negrita o la luz de una fuente.
-                
-                La propiedad de font-size se utiliza para aumentar o disminuir el tamaño de una fuente.
-                
-                La propiedad de font se utiliza como forma abreviada para especificar otras propiedades de fuente.
-            </p>
+        <div style="display: flex;">
+            <div class="section border-end border-dark">
+                <!-- Nombre Completo -->
+                <h4><strong>Lautaro Martín Seoane</strong></h4>
+            </div>
+            <div class="aside">
+                <!-- Información Profesional -->
+                <p class="badge text-bg-primary">Información acerca de MI</p>
+                <p>Joven Desarrollador Full Stack Jr, sin experiencia profecional pero en busqueda de aprendizajes Joven</p>  
+            </div>
+        </div>
+        
 
-            <h3> Sobre Mi </h3>
-            <p>Veamos cómo configurar las fuentes de un contenido, disponible en un elemento HTML. Puedes establecer las siguientes propiedades de fuente de un elemento:
-    
-                La propiedad font-family se utiliza para cambiar la cara de una fuente.
-                
-                La propiedad de font-style se usa para hacer una fuente en cursiva u oblicua.
-                
-                La propiedad font-variant se utiliza para crear un efecto de versalitas.
-                
-                La propiedad de font-weight se utiliza para aumentar o disminuir la negrita o la luz de una fuente.
-                
-                La propiedad de font-size se utiliza para aumentar o disminuir el tamaño de una fuente.
-                
-                La propiedad de font se utiliza como forma abreviada para especificar otras propiedades de fuente.
-            </p>
+            <div class="main">
+                <span class="badge bg-primary" style="font-size: larger; justify-content: center; display: flex;" >EDUCACION</span>
+                <div>
+                    <div class="section border-end border-dark">
 
+                        <img src="/img/empty.jpg" alt="Imagen vacia">
+                    </div>
+                    <div class="aside">
+                        <p class="badge text-bg-primary" >Información acerca de MI</p>
+                        <p>Joven Desarrollador Full Stack Jr, sin experiencia profecional pero en busqueda de aprendizajes</p>    
+                    </div>
+                </div>
+            </div>
 
 
         <!-- Bootstrap JavaScript -->
