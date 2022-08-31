@@ -18,7 +18,6 @@ header{
     justify-content: space-between;
     background-color: #0d6efd;
     height: 100px;
-    padding: 5px;
     align-items: center;
     color: white;
 }
@@ -69,12 +68,13 @@ header{
     height: 50px;
     width: 100px;
 }
-.footer{
-    background-color: rgb(53, 187, 93);
-    width: 100%;
-    height: 100px;
-}
 i{
     color:gray;
     font-size: smaller;
+}
+.sector{
+    font-size: larger; 
+    justify-content: center; 
+    display: flex;
+    text-transform: uppercase;
 }
