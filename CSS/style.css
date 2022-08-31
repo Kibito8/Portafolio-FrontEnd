@@ -40,7 +40,6 @@ header{
     clip-path: circle();
 }
 .banner{
-    background-image: url(/img/codigos.jpg);
     background-repeat:no-repeat;
     background-size: cover;
     background-position: center ;
