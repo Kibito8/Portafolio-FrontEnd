@@ -1,4 +1,4 @@
-* {
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -6,20 +6,17 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.logo {
-    display: flex;
-    align-items: center;
-}
-.logo img{
-    height: 88px;
-}
-header{
-    display: flex;
-    justify-content: space-between;
+.navbar{
     background-color: #0d6efd;
-    height: 100px;
+}
+.navbar-nav{
+    background-color: #02409ede;
+    border-radius: 4px;
+}
+.navbar-nav{
+    display: flex;
     align-items: center;
-    color: white;
+    justify-content: center;
 }
 .logobtn img{
     width: 25px;
@@ -33,19 +30,19 @@ header{
     background-color: white;
     color: #0d6efd;
 }
-.Perfil{
-    background-color: white;
-    width: 140px;
-    height: 140px;
-    clip-path: circle();
-}
 .banner{
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-position: center ;
+    background-color: black;
     width: 100%;
-    height: calc(23vh - 50px);
-    align-items: flex-end; display: flex;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://fotos.perfil.com/2022/04/07/trim/950/534/html-1338739.jpg?webp);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.banner > div {
+    padding-left: 150px;
 }
 .section{
     width: 25%;
@@ -57,15 +54,18 @@ header{
     align-items: center;
     
 }
+.section img{
+    height: 55px;
+    width: 90px;
+}
 .aside{
     width: 75%;
     min-height: 120px;
     max-height: auto;
     padding-left: 10px;
 }
-.section img{
-    height: 50px;
-    width: 100px;
+.border{
+    display: flex;
 }
 i{
     color:gray;
@@ -76,4 +76,58 @@ i{
     justify-content: center; 
     display: flex;
     text-transform: uppercase;
+}
+.badge{
+    border-radius: 0%;
+}
+.progress{
+    border-radius: 0%;
+    transition-property: height;
+    transition-duration: 1s;
+}
+.progress-bar{
+    color:black;
+    opacity:0;
+    transition-property: height,opacity;
+    transition-duration: 0.5s;
+}
+.skill_container{
+    color: black;
+    height: 50px;
+    min-width: 100px;
+    max-width: auto;
+    grid-template-columns: auto;
+    margin: 2px;
+    border-radius: 4px;
+    background-color: #55a8fd;
+    transition-duration: 1s;
+}
+.skill_container:hover{
+    background: #188bff;
+    height: 100px;
+    min-width: 410px;
+    max-width: auto;
+}
+.skill_container:hover .progress{
+    height: 30px;
+}
+.skill_container:hover .progress-bar{
+    background-color: #086afd;
+    opacity: 1;
+    height: 35px;
+}
+.name_skill{
+    height: 70px; 
+    display: flex;
+    justify-content: center; 
+    padding-top: 15px;
+}
+.titulo{
+    text-transform: uppercase;
+    margin: 2px;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif
+}
+.texto{
+    display: flex;
+    justify-content: space-between;
 }
