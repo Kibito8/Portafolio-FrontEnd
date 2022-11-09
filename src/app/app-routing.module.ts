@@ -10,8 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 
 // Definimos nuestras rutas
 const routes: Routes = [
-  {path: 'home', component:HomeComponent},
-  {path: '', redirectTo: '/home',pathMatch:'full'},
+  {path: '', component:HomeComponent},
+  {path: '', redirectTo: '',pathMatch:'full'},
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent},
   {path: 'mi-perfil', 
