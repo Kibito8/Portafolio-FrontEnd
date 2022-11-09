@@ -1,0 +1,48 @@
+<div class="mat-dialog-title d-flex justify-content-center">¡Ingresar a la cuenta!</div>
+<div class="selector">
+    <a type="button" class="boton-selector" (click)="changeLog()"><strong>Iniciar Sesión</strong></a>
+    <span>|</span>
+    <a type="button" class="boton-selector" (click)="changeReg()"><strong>Registrarse</strong></a>
+</div>
+<div class="d-flex justify-content-center">
+    <span *ngIf="bool"><strong>Ya estás ahí</strong></span>
+</div>
+<div class="divider"></div>
+<br>
+<div class="formulario mat-dialog-content">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div>
+            <strong for="username">Nombre de usuario: </strong>
+            <input type="text" formControlName="username">
+        </div>
+        <!-- Gracias al getter que configuramos en el controlador -->
+        <div *ngIf="Username?.errors && Username?.touched" class="error">
+            <p *ngIf="Username?.hasError('required')">
+                El Nombre de usuario es necesario.
+            </p>
+            <p *ngIf="Username?.errors?.['minlength']&&['maxlength']">
+                El Nombre de usuario debe tener entre 5 a 12 carácteres.
+            </p>
+        </div>
+        <br><br>
+        <div>
+            <strong for="exampleInputPassword1" class="form-label">Contraseña: </strong>
+            <input type="password" formControlName="password" [class.border-danger]="MailValid">
+        </div>
+        <!-- Gracias al getter que configuramos en el controlador -->
+        <div *ngIf="Password?.errors && Password?.touched" class="error">
+            <p *ngIf="Password?.hasError('required')">
+                La contraseña es necesaria
+            </p>
+            <p *ngIf="Password?.errors?.['minlength']">
+                La contraseña debe tener minimo 8 carácteres
+            </p>
+        </div>
+        <br>
+        <div class="divider"></div>
+    </form>
+</div>
+<mat-dialog-actions class="selector-inferior">
+    <a type="submit" class="botones selector mat-raised-button" (click)="cerrar()"><strong>Cancelar</strong></a>
+    <a type="submit" class="botones selector mat-raised-button" (click)="onEnviar($event)"><strong>Enviar</strong></a>
+</mat-dialog-actions>
