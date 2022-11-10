@@ -1,30 +1,16 @@
-<div class="mat-dialog-title d-flex justify-content-center">¡Registrarse!</div>
+<div class="mat-dialog-title d-flex justify-content-center">¡Registrar una cuenta!</div>
 <div class="selector">
-    <a type="button" class="boton-selector" (click)="changeLog()"><strong>Iniciar Sesión</strong></a>
+    <a type="button" class="boton-selector btn" (click)="changeLog()"><strong>Iniciar Sesión</strong></a>
     <span>|</span>
-    <a type="button" class="boton-selector" (click)="changeReg()"><strong>Registrarse</strong></a>
+    <a type="button" class="boton-selector btn borde-verde" (click)="changeReg()"><strong>Registrarse</strong></a>
 </div>
 <div class="d-flex justify-content-center">
-    <span *ngIf="bool"><strong>Ya estás ahí</strong></span>
+    <span *ngIf="!bool" style="margin: 4px;"><strong>Ya estás ahí</strong></span>
 </div>
 <div class="divider"></div>
 <br>
 <div class="formulario mat-dialog-content">
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-        <div >
-            <strong for="username">Nombre de usuario: </strong>
-            <input type="text" formControlName="username">
-        </div>
-        <!-- Gracias al getter que configuramos en el controlador -->
-        <div *ngIf="Username?.errors && Username?.touched" class="error">
-            <p *ngIf="Username?.hasError('required')">
-                El Nombre de usuario es necesario.
-            </p>
-            <p *ngIf="Username?.errors?.['minlength']&&['maxlength']">
-                El Nombre de usuario debe tener entre 5 a 12 carácteres.
-            </p>
-        </div>
-        <br><br>
         <div>
             <strong for="email">Correo electronico: </strong>
             <input type="email" formControlName="email">

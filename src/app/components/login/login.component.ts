@@ -12,7 +12,7 @@ import { MatDialog, MatDialogRef, MatDialogConfig} from '@angular/material/dialo
 
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  bool = false;
+  bool = true;
 
   // Inyectamos en el constructor el formBuilder
   constructor(
@@ -66,7 +66,6 @@ export class LoginComponent implements OnInit {
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template
       this.form.markAllAsTouched();
     }
-
   }
 
   openDialogReg(){
@@ -81,8 +80,6 @@ export class LoginComponent implements OnInit {
   changeLog(){
     if(this.bool){
       this.bool=false;
-    }else{
-      this.bool=true;
     }
   }
 

@@ -6,51 +6,21 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.navbar{
-    background-color: #0d6efd;
-    height: 50px;
+.boton{
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
 }
-.logobtn img{
-    width: 25px;
-    height: 25px;
-    background-color: white;
-}
-.banner{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url(https://fotos.perfil.com/2022/04/07/trim/950/534/html-1338739.jpg?webp);
-    background-repeat:no-repeat;
-    background-size:cover;
-}
-.perfil{
-    border-radius: 50%; 
-    height: 150px; 
-    width: 150px;
-}
-.section{
-    width: 25%;
-    float: left;
-    min-height: 120px;
-    max-height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.section img{
-    height: 55px;
-    width: 90px;
+.boton:hover{
+    color: white;
+    text-decoration: none;
 }
 .aside{
-    width: 75%;
+    width: 100%;
     min-height: 120px;
     max-height: auto;
     padding-left: 10px;
-}
-.border{
-    display: flex;
 }
 i{
     color:gray;
@@ -67,91 +37,32 @@ i{
     text-transform: uppercase;
     border: black 1px solid;
 }
-.badge{
-    border-radius: 0%;
-}
-.progress{
-    border-radius: 0%;
-    transition-property: height;
-    transition-duration: 1s;
-    background-color: transparent;
-}
-.progress-bar{
-    color:black;
-    font-size: larger;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    opacity:0;
-    background-color: transparent;
-    transition-property: height,opacity;
-    transition-duration: 1s;
-}
-.skill_container{
-    color: white;
-    height: 50px;
-    min-width: 100px;
-    max-width: auto;
-    grid-template-columns: auto;
-    margin: 4px;
+.enfasis-mini{
     border-radius: 4px;
+    width: fit-content;
+    height: auto;
     background-color: #086afd;
-    transition-duration: 0.5s;
-}
-.skill_container:hover{
-    height: 104px;
-}
-.skill_container:hover .progress{
-    height: 30px;
-    background-color: white;
-}
-.skill_container:hover .progress-bar{
-    background-color: #55a8fd;
-    opacity: 1;
-    height: 35px;
-}
-.name_skill{
-    height: 70px; 
-    display: flex;
-    justify-content: center; 
-    padding-top: 15px;
-}
-.accordion-button{
-    transition: 0.5s;
-}
-.accordion-button:hover{
-    color: #0d6efd;
-    transition: all;
-}
-.titulo{
-    text-transform: uppercase;
-    margin: 2px;
-    font-family:Impact, 'Arial Narrow Bold', sans-serif
-}
-.texto{
-    display: flex;
-    justify-content: space-between;
-}
-.footer{
     color: white;
-    background-color: rgb(0, 47, 255);
-    height: 50px;
-    border: black 1px solid ;
-    display: flex;
-    align-items: center;
-    font-size: larger;
+    font-size: smaller; 
+    font-weight: bolder;
     text-transform: uppercase;
+    border: black 1px solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.enfasis-mini-secondary{
+    border-radius: 4px;
+    width: fit-content;
+    height: auto;
+    background-color: gray;
+    color: white;
+    font-size: smaller; 
+    font-weight: bolder;
+    text-transform: uppercase;
+    border: black 1px solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .divider{
     border-top: black 1px solid;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.boton{
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    margin: 10px;
-}
-.boton:hover{
-    color: white;
-    text-decoration: none;
 }

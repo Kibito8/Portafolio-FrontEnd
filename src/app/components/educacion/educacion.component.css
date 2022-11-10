@@ -1,0 +1,10 @@
+.sector-img{
+    display: absolute;
+    float: left;
+    width: auto;
+    height: auto;
+}
+.img-insti{
+    width: 230px;
+    height: 120px;
+}

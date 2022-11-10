@@ -1,0 +1,16 @@
+.accordion-button{
+    transition: 0.5s;
+}
+.accordion-button:hover{
+    color: #0d6efd;
+    transition: all;
+}
+.titulo{
+    text-transform: uppercase;
+    margin: 2px;
+    font-family:Impact, 'Arial Narrow Bold', sans-serif
+}
+.texto{
+    display: flex;
+    justify-content: space-between;
+}

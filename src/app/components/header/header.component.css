@@ -1,0 +1,13 @@
+.btn{
+    color:white;
+    border-color: white;
+    border: solid 1px;
+}
+.navbar{
+    background-color: #0d6efd;
+}
+.logobtn img{
+    width: 25px;
+    height: 25px;
+    background-color: white;
+}

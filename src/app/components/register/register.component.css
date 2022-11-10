@@ -41,3 +41,12 @@
     display: flex;
     justify-content: center;
 }
+.borde-verde{
+    border: solid 1.5px;
+    border-color: rgb(9, 255, 0);
+    color: white;
+    border-radius: 20px;
+}
+.btn{
+    border-radius: 20px;
+}

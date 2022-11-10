@@ -13,10 +13,10 @@ import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciasComponent } from './components/experiencias/experiencias.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
+import { SkillsListComponent } from './components/skills-list/skills-list.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +28,10 @@ import { HomeComponent } from './components/home/home.component';
     AcercaDeComponent,
     EducacionComponent,
     ExperienciasComponent,
-    SkillsComponent,
     ProyectosComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    SkillsListComponent
   ],
   imports: [
     BrowserModule,

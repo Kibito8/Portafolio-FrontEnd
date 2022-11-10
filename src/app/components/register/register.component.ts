@@ -11,7 +11,7 @@ import { MatDialog, MatDialogRef, MatDialogConfig} from '@angular/material/dialo
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
-  bool = false;
+  bool = true;
 
   // Inyectamos en el constructor el formBuilder
   constructor(
@@ -85,8 +85,6 @@ export class RegisterComponent implements OnInit {
   changeReg(){
     if(this.bool){
       this.bool=false;
-    }else{
-      this.bool=true;
     }
   }
 

@@ -1,27 +1,27 @@
 <div class="mat-dialog-title d-flex justify-content-center">¡Ingresar a la cuenta!</div>
 <div class="selector">
-    <a type="button" class="boton-selector" (click)="changeLog()"><strong>Iniciar Sesión</strong></a>
+    <a type="button" class="boton-selector btn borde-verde" style="color: white;" (click)="changeLog()"><strong>Iniciar Sesión</strong></a>
     <span>|</span>
-    <a type="button" class="boton-selector" (click)="changeReg()"><strong>Registrarse</strong></a>
+    <a type="button" class="boton-selector btn" (click)="changeReg()"><strong>Registrarse</strong></a>
 </div>
 <div class="d-flex justify-content-center">
-    <span *ngIf="bool"><strong>Ya estás ahí</strong></span>
+    <span *ngIf="!bool" style="margin: 4px;"><strong>Ya estás ahí</strong></span>
 </div>
 <div class="divider"></div>
 <br>
 <div class="formulario mat-dialog-content">
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
         <div>
-            <strong for="username">Nombre de usuario: </strong>
-            <input type="text" formControlName="username">
+            <strong for="email">Correo electronico: </strong>
+            <input type="email" formControlName="email">
         </div>
         <!-- Gracias al getter que configuramos en el controlador -->
-        <div *ngIf="Username?.errors && Username?.touched" class="error">
-            <p *ngIf="Username?.hasError('required')">
-                El Nombre de usuario es necesario.
+        <div *ngIf="Mail?.errors && Mail?.touched" class="error">
+            <p *ngIf="Mail?.hasError('required')">
+                El Correo es necesario
             </p>
-            <p *ngIf="Username?.errors?.['minlength']&&['maxlength']">
-                El Nombre de usuario debe tener entre 5 a 12 carácteres.
+            <p *ngIf="Mail?.errors?.['email']">
+                El Correo debe cumplir el formato de un Email
             </p>
         </div>
         <br><br>
