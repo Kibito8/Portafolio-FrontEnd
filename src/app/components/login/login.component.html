@@ -11,10 +11,7 @@
 <br>
 <div class="formulario mat-dialog-content">
     <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-        <div>
-            <strong for="email">Correo electronico: </strong>
-            <input type="email" formControlName="email">
-        </div>
+        <input type="email" class="input" placeholder="Correo electronico" formControlName="email" [class.border-danger]="MailValid">
         <!-- Gracias al getter que configuramos en el controlador -->
         <div *ngIf="Mail?.errors && Mail?.touched" class="error">
             <p *ngIf="Mail?.hasError('required')">
@@ -25,10 +22,7 @@
             </p>
         </div>
         <br><br>
-        <div>
-            <strong for="exampleInputPassword1" class="form-label">Contraseña: </strong>
-            <input type="password" formControlName="password" [class.border-danger]="MailValid">
-        </div>
+        <input type="password" class="input" placeholder="Contraseña" formControlName="password" [class.border-danger]="PasswordValid">
         <!-- Gracias al getter que configuramos en el controlador -->
         <div *ngIf="Password?.errors && Password?.touched" class="error">
             <p *ngIf="Password?.hasError('required')">
@@ -39,9 +33,9 @@
             </p>
         </div>
         <br>
-        <div class="divider"></div>
     </form>
 </div>
+<div class="divider"></div>
 <mat-dialog-actions class="selector-inferior">
     <a type="submit" class="botones selector mat-raised-button" (click)="cerrar()"><strong>Cancelar</strong></a>
     <a type="submit" class="botones selector mat-raised-button" (click)="onEnviar($event)"><strong>Enviar</strong></a>

@@ -32,10 +32,6 @@ export class RegisterComponent implements OnInit {
   cerrar(){
     this.dialogRef.close(this.form.value)
   }
-  
-  get Username(){
-    return this.form.get("username");
-  }
 
   get Password(){
     return this.form.get("password");
@@ -50,7 +46,7 @@ export class RegisterComponent implements OnInit {
   }
 
   get MailValid(){
-    return false
+    return this.Mail?.touched && !this.Mail?.valid;
   }
 
   onEnviar(event: Event){

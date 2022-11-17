@@ -33,10 +33,6 @@ export class LoginComponent implements OnInit {
     this.dialogRef.close(this.form.value)
   }
 
-  get Username(){
-    return this.form.get("username");
-  }
-
   get Password(){
     return this.form.get("password");
   }
@@ -50,7 +46,7 @@ export class LoginComponent implements OnInit {
   }
 
   get MailValid(){
-    return false
+    return this.Mail?.touched && !this.Mail?.valid;
   }
 
   onEnviar(event: Event){
