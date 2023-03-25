@@ -4,11 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { HeaderComponent } from './components/header/header.component';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
@@ -17,13 +15,21 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+
+const appRoutes:Routes=[
+  {path: '', component:HomeComponent,},
+  {path: 'login', component: LoginComponent, },
+  {path: 'register', component: RegisterComponent},
+  { path: '**', component: Pagina404Component }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ProfileComponent,
-    HeaderComponent,
     Pagina404Component,
     AcercaDeComponent,
     EducacionComponent,
@@ -31,11 +37,12 @@ import { SkillsListComponent } from './components/skills-list/skills-list.compon
     ProyectosComponent,
     RegisterComponent,
     HomeComponent,
-    SkillsListComponent
+    SkillsListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

@@ -1,43 +1,33 @@
-<div class="mat-dialog-title d-flex justify-content-center">¡Registrar una cuenta!</div>
-<div class="selector">
-    <a type="button" class="boton-selector btn" (click)="changeLog()"><strong>Iniciar Sesión</strong></a>
-    <span>|</span>
-    <a type="button" class="boton-selector btn borde-verde" (click)="changeReg()"><strong>Registrarse</strong></a>
-</div>
-<div class="d-flex justify-content-center">
-    <span *ngIf="!bool" style="margin: 4px;"><strong>Ya estás ahí</strong></span>
-</div>
-<div class="divider"></div>
-<br>
-<div class="formulario mat-dialog-content">
-    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-        <input class="input" type="email" placeholder="Correo electronico" formControlName="email" [class.border-danger]="MailValid">
-        <!-- Gracias al getter que configuramos en el controlador -->
-        <div *ngIf="Mail?.errors && Mail?.touched" class="error">
-            <p *ngIf="Mail?.hasError('required')">
-                El Correo es necesario
-            </p>
-            <p *ngIf="Mail?.errors?.['email']">
-                El Correo debe cumplir el formato de un Email
-            </p>
-        </div>
-        <br><br>
-        <input type="password" class="input" placeholder="Contraseña" formControlName="password" [class.border-danger]="PasswordValid">
-        <!-- Gracias al getter que configuramos en el controlador -->
-        <div *ngIf="Password?.errors && Password?.touched" class="error">
-            <p *ngIf="Password?.hasError('required')">
-                La contraseña es necesaria
-            </p>
-            <p *ngIf="Password?.errors?.['minlength']">
-                La contraseña debe tener minimo 8 carácteres
-            </p>
-        </div>
-        <br>
+<div class="container-fluid formulario">
+
+    <div class="selector">
+        <a type="button" class="boton-selector btn borde-verde" style="color: white;" (click)="changeReg()"><strong>Registrarse</strong></a>
+        <span>|</span>
+        <a type="button" class="boton-selector btn" href="login"><strong>Iniciar Sesión</strong></a>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <span *ngIf="!bool" style="margin: 4px;"><strong>Ya estás ahí</strong></span>
+    </div>
+
+    <div class="divider"></div>
+
+    <strong><p>Registre una nueva Cuenta</p></strong>
+
+    <form class="form-group row">
+        
+        <strong><p>Ingrese su Nombre: <input placeholder="Lucas" class="form-control" name="nombre" type="text"></p></strong>
+
+        <strong><p>Ingrese su Apellido: <input placeholder="Ramírez" class="form-control" name="apellido" type="text"></p></strong>
+
+        <strong><p>Ingrese su E-mail: <input placeholder="....@gmail.com" class="form-control" name="email" type="email" ></p></strong>
+
+        <strong><p>Ingrese su Contraseña: <input type="password" class="form-control" name="password" placeholder="Contraseña" ></p></strong>
+        
     </form>
+
+    <div class="divider"></div>
+
+    <button style="margin-bottom: 10px;" class="btn" type="submit">Enviar</button>
+
 </div>
-<br>
-<div class="divider"></div>
-<mat-dialog-actions class="selector-inferior">
-    <a type="submit" class="btn botones selector mat-raised-button" (click)="cerrar()"><strong>Cancelar</strong></a>
-    <a type="submit" class="btn botones selector mat-raised-button" (click)="onEnviar($event)"><strong>Enviar</strong></a>
-</mat-dialog-actions>

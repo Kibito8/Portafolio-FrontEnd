@@ -3,8 +3,8 @@
         <!-- Nombre del Usuario -->
         <a routerLink="" type="button" class="boton">{{title}}</a>
         <div>
-            <a *ngIf="username" type="button" class="boton btn"><strong>Perfil</strong></a>
-            <a *ngIf="!username" type="button" class="boton btn" (click)="openDialogReg()"><strong>Cuenta</strong></a>
+            <a type="button" class="boton btn" href="register"><strong>Cuenta</strong></a>
+
             <!-- Botón para Ir a Linkedin -->
             <a class="boton logobtn" type="button" href="https://www.linkedin.com/in/lautaro-seoane/"><img [src]="linkedin_image" alt="linkedin"></a>
         </div>
