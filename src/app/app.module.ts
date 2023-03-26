@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -17,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SkillsListComponent } from './components/skills-list/skills-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
+import { DataServices } from './services/data.services';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes:Routes=[
   {path: '', component:HomeComponent,},
@@ -38,7 +39,7 @@ const appRoutes:Routes=[
     RegisterComponent,
     HomeComponent,
     SkillsListComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,9 +47,9 @@ const appRoutes:Routes=[
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
