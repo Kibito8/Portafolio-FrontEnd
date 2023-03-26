@@ -1,6 +1,6 @@
 {
   "database": {
-    "rules": "y"
+    "rules": "rules"
   },
   "hosting": {
     "public": "public",
